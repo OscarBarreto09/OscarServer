@@ -1,12 +1,12 @@
+const crypto = requiere ("crypto")
+
+
 class UserManager {
   static #users = [];
   create(data) {
     const user = {
-      id:
-        UserManager.#users.length === 0
-          ? 1
-          : UserManager.#users[UserManager.#users.length - 1].id + 1,
-      photo: data.photo,
+      id: crypto.randomBytes(12).toString("hex"),
+      photo: data.photo || "https://raysensenbach.com/wp-content/uploads/2013/04/default.jpg",
       email: data.email,
       password: data.password,
       role: 0,
@@ -21,23 +21,28 @@ class UserManager {
 
 const usuarios = new UserManager()
 usuarios.create({
-    photo: "photo1.png",
+    photo: "",
     email: "usuario1@gmail.com",
     password: 1234
 })
 
 usuarios.create({
-    photo: "photo2.png",
+    photo: "",
     email: "usuario2@gmail.com",
     password: 5678
 })
 
 usuarios.create({
-    photo: "photo3.png",
+    photo: "",
     email: "usuario3@gmail.com",
     password: 9874
 })
 
+usuarios.create({
+  photo: "",
+  email: "usuario4@gmail.com",
+  password: 56123
+})
+
 console.log(usuarios.read())
 
-//
