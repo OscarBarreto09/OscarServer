@@ -1,5 +1,5 @@
-const fs = require("fs");
-const crypto = require("crypto");
+import fs from "fs";
+import crypto from "crypto";
 
 class ProductsManager {
   constructor() {
@@ -45,11 +45,11 @@ class ProductsManager {
       throw error;
     }
   }
-  async read() {
+  async read(cat) {
     try {
       let products = await fs.promises.readFile(this.path, "utf-8");
       products = JSON.parse(products);
-
+      products = products.filter(each=>each.category===cat)
       if (products.length === 0) {
         throw new Error("No hay productos");
       } else {
@@ -97,7 +97,7 @@ class ProductsManager {
   }
 }
 
-async function test() {
+/*async function test() {
   try {
     const productos = new ProductsManager();
     await productos.create({
@@ -188,4 +188,7 @@ async function test() {
   }
 }
 
-test();
+test();*/
+
+const productsManager = new ProductsManager()
+export default productsManager

@@ -1,82 +1,110 @@
 [
-  {
-    "id": "87abeacd771018edc78d53b9",
-    "title": "camiseta",
-    "photo": "camiseta.jpg",
-    "category": "ropa",
-    "price": 120,
-    "stock": 500
-  },
-  {
-    "id": "15c8ca4fe3cc579d7924b9c1",
-    "title": "balon",
-    "photo": "balon.jpg",
-    "category": "balones",
-    "price": 280,
-    "stock": 120
-  },
-  {
-    "id": "73f61dde27c5f3efc758cd20",
-    "title": "abrigo",
-    "photo": "abrigo.jpg",
-    "category": "ropa",
-    "price": 500,
-    "stock": 80
-  },
-  {
-    "id": "0ad770d09d537fe7cc1fd012",
-    "title": "botas",
-    "photo": "botas.jpg",
-    "category": "calzado",
-    "price": 250,
-    "stock": 100
-  },
-  {
-    "id": "32781cf31b1fbc046ad3a235",
-    "title": "gorra",
-    "photo": "gorra.jpg",
-    "category": "accesorios",
-    "price": 50,
-    "stock": 50
-  },
-  {
-    "id": "a4b0927f8d72615185031ab1",
-    "title": "guantes",
-    "photo": "guantes.jpg",
-    "category": "accesorios",
-    "price": 50,
-    "stock": 100
-  },
-  {
-    "id": "79089883ac41871fe21169ed",
-    "title": "abrigoCafe",
-    "photo": "abrigoCafe.jpg",
-    "category": "abrigos",
-    "price": 350,
-    "stock": 50
-  },
-  {
-    "id": "4fe4d7d665e4256181002d59",
-    "title": "saco",
-    "photo": "saco.jpg",
-    "category": "ropa",
-    "price": 150,
-    "stock": 60
-  },
-  {
-    "id": "10a2b8d45215d43b94a221f5",
-    "title": "tennisnike",
-    "photo": "tennisnike.jpg",
-    "category": "calzado",
-    "price": 480,
-    "stock": 20
-  },
-  {
-    "id": "73864d0cb4b0f36a14a7a750",
-    "title": "tennisadidas",
-    "photo": "tennisadidas.jpg",
-    "category": "calzado",
-    "price": 50,
-    "stock": 50
-  }
-]
+    {
+      "title": "Gold Standard Whey Protein",
+      "photo": "gold_standard_whey.jpg",
+      "category": "proteina",
+      "price": 45,
+      "size": "2 lbs",
+      "brand": "Optimum Nutrition",
+      "stock": 100
+    },
+    {
+      "title": "ISO 100 Hydrolyzed Protein",
+      "photo": "iso_100.jpg",
+      "category": "proteina",
+      "price": 50,
+      "size": "5 lbs",
+      "brand": "Dymatize",
+      "stock": 80
+    },
+    {
+      "title": "BCAA 2:1:1",
+      "photo": "bcaa_211.jpg",
+      "category": "bcaa",
+      "price": 30,
+      "size": "300 g",
+      "brand": "MusclePharm",
+      "stock": 120
+    },
+    {
+      "title": "BCAA Energy",
+      "photo": "bcaa_energy.jpg",
+      "category": "bcaa",
+      "price": 25,
+      "size": "250 g",
+      "brand": "Evlution Nutrition",
+      "stock": 150
+    },
+    {
+      "title": "Creatine Monohydrate",
+      "photo": "creatina_monohidratada.jpg",
+      "category": "creatina",
+      "price": 20,
+      "size": "500 g",
+      "brand": "BulkSupplements",
+      "stock": 200
+    },
+    {
+      "title": "Micronized Creatine",
+      "photo": "micronized_creatine.jpg",
+      "category": "creatina",
+      "price": 18,
+      "size": "400 g",
+      "brand": "MuscleTech",
+      "stock": 180
+    },
+    {
+      "title": "Fat Burner Plus",
+      "photo": "fat_burner_plus.jpg",
+      "category": "quemador",
+      "price": 35,
+      "size": "120 capsules",
+      "brand": "JYM Supplement Science",
+      "stock": 80
+    },
+    {
+      "title": "Thermo Burn",
+      "photo": "thermo_burn.jpg",
+      "category": "quemador",
+      "price": 40,
+      "size": "90 capsules",
+      "brand": "Cellucor",
+      "stock": 100
+    },
+    {
+      "title": "Mass Gainer",
+      "photo": "mass_gainer.jpg",
+      "category": "creatina_hipercalorica",
+      "price": 55,
+      "size": "10 lbs",
+      "brand": "MuscleMilk",
+      "stock": 70
+    },
+    {
+      "title": "Serious Mass",
+      "photo": "serious_mass.jpg",
+      "category": "creatina_hipercalorica",
+      "price": 60,
+      "size": "12 lbs",
+      "brand": "Optimum Nutrition",
+      "stock": 90
+    },
+    {
+      "title": "L-Glutamine Powder",
+      "photo": "l_glutamine.jpg",
+      "category": "glutamina",
+      "price": 25,
+      "size": "300 g",
+      "brand": "NOW Sports",
+      "stock": 150
+    },
+    {
+      "title": "Glutamine Capsules",
+      "photo": "glutamine_capsules.jpg",
+      "category": "glutamina",
+      "price": 30,
+      "size": "200 capsules",
+      "brand": "Bodybuilding.com Signature",
+      "stock": 120
+    }
+  ]
