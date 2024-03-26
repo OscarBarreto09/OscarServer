@@ -1,0 +1,82 @@
+[
+  {
+    "id": "87abeacd771018edc78d53b9",
+    "title": "camiseta",
+    "photo": "camiseta.jpg",
+    "category": "ropa",
+    "price": 120,
+    "stock": 500
+  },
+  {
+    "id": "15c8ca4fe3cc579d7924b9c1",
+    "title": "balon",
+    "photo": "balon.jpg",
+    "category": "balones",
+    "price": 280,
+    "stock": 120
+  },
+  {
+    "id": "73f61dde27c5f3efc758cd20",
+    "title": "abrigo",
+    "photo": "abrigo.jpg",
+    "category": "ropa",
+    "price": 500,
+    "stock": 80
+  },
+  {
+    "id": "0ad770d09d537fe7cc1fd012",
+    "title": "botas",
+    "photo": "botas.jpg",
+    "category": "calzado",
+    "price": 250,
+    "stock": 100
+  },
+  {
+    "id": "32781cf31b1fbc046ad3a235",
+    "title": "gorra",
+    "photo": "gorra.jpg",
+    "category": "accesorios",
+    "price": 50,
+    "stock": 50
+  },
+  {
+    "id": "a4b0927f8d72615185031ab1",
+    "title": "guantes",
+    "photo": "guantes.jpg",
+    "category": "accesorios",
+    "price": 50,
+    "stock": 100
+  },
+  {
+    "id": "79089883ac41871fe21169ed",
+    "title": "abrigoCafe",
+    "photo": "abrigoCafe.jpg",
+    "category": "abrigos",
+    "price": 350,
+    "stock": 50
+  },
+  {
+    "id": "4fe4d7d665e4256181002d59",
+    "title": "saco",
+    "photo": "saco.jpg",
+    "category": "ropa",
+    "price": 150,
+    "stock": 60
+  },
+  {
+    "id": "10a2b8d45215d43b94a221f5",
+    "title": "tennisnike",
+    "photo": "tennisnike.jpg",
+    "category": "calzado",
+    "price": 480,
+    "stock": 20
+  },
+  {
+    "id": "73864d0cb4b0f36a14a7a750",
+    "title": "tennisadidas",
+    "photo": "tennisadidas.jpg",
+    "category": "calzado",
+    "price": 50,
+    "stock": 50
+  }
+]
