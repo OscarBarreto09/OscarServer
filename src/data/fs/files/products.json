@@ -1,0 +1,363 @@
+[
+  {
+    "title": "Gold Standard Whey Protein",
+    "photo": "gold_standard_whey.jpg",
+    "category": "proteina",
+    "price": 45,
+    "size": "2 lbs",
+    "brand": "Optimum Nutrition",
+    "stock": 100
+  },
+  {
+    "title": "ISO 100 Hydrolyzed Protein",
+    "photo": "iso_100.jpg",
+    "category": "proteina",
+    "price": 50,
+    "size": "5 lbs",
+    "brand": "Dymatize",
+    "stock": 80
+  },
+  {
+    "title": "BCAA 2:1:1",
+    "photo": "bcaa_211.jpg",
+    "category": "bcaa",
+    "price": 30,
+    "size": "300 g",
+    "brand": "MusclePharm",
+    "stock": 120
+  },
+  {
+    "title": "BCAA Energy",
+    "photo": "bcaa_energy.jpg",
+    "category": "bcaa",
+    "price": 25,
+    "size": "250 g",
+    "brand": "Evlution Nutrition",
+    "stock": 150
+  },
+  {
+    "title": "Creatine Monohydrate",
+    "photo": "creatina_monohidratada.jpg",
+    "category": "creatina",
+    "price": 20,
+    "size": "500 g",
+    "brand": "BulkSupplements",
+    "stock": 200
+  },
+  {
+    "title": "Micronized Creatine",
+    "photo": "micronized_creatine.jpg",
+    "category": "creatina",
+    "price": 18,
+    "size": "400 g",
+    "brand": "MuscleTech",
+    "stock": 180
+  },
+  {
+    "title": "Fat Burner Plus",
+    "photo": "fat_burner_plus.jpg",
+    "category": "quemador",
+    "price": 35,
+    "size": "120 capsules",
+    "brand": "JYM Supplement Science",
+    "stock": 80
+  },
+  {
+    "title": "Thermo Burn",
+    "photo": "thermo_burn.jpg",
+    "category": "quemador",
+    "price": 40,
+    "size": "90 capsules",
+    "brand": "Cellucor",
+    "stock": 100
+  },
+  {
+    "title": "Mass Gainer",
+    "photo": "mass_gainer.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 55,
+    "size": "10 lbs",
+    "brand": "MuscleMilk",
+    "stock": 70
+  },
+  {
+    "title": "Serious Mass",
+    "photo": "serious_mass.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 60,
+    "size": "12 lbs",
+    "brand": "Optimum Nutrition",
+    "stock": 90
+  },
+  {
+    "title": "L-Glutamine Powder",
+    "photo": "l_glutamine.jpg",
+    "category": "glutamina",
+    "price": 25,
+    "size": "300 g",
+    "brand": "NOW Sports",
+    "stock": 150
+  },
+  {
+    "title": "Glutamine Capsules",
+    "photo": "glutamine_capsules.jpg",
+    "category": "glutamina",
+    "price": 30,
+    "size": "200 capsules",
+    "brand": "Bodybuilding.com Signature",
+    "stock": 120
+  },
+  {
+    "title": "Whey Protein Isolate",
+    "photo": "whey_isolate.jpg",
+    "category": "proteina",
+    "price": 55,
+    "size": "3 lbs",
+    "brand": "MuscleTech",
+    "stock": 120
+  },
+  {
+    "title": "Casein Protein",
+    "photo": "casein_protein.jpg",
+    "category": "proteina",
+    "price": 40,
+    "size": "2.5 lbs",
+    "brand": "Body Fortress",
+    "stock": 100
+  },
+  {
+    "title": "Amino Energy",
+    "photo": "amino_energy.jpg",
+    "category": "bcaa",
+    "price": 35,
+    "size": "300 g",
+    "brand": "Optimum Nutrition",
+    "stock": 80
+  },
+  {
+    "title": "Essential Amino Acids",
+    "photo": "essential_amino_acids.jpg",
+    "category": "bcaa",
+    "price": 30,
+    "size": "250 g",
+    "brand": "GNC",
+    "stock": 150
+  },
+  {
+    "title": "Creatine HCl",
+    "photo": "creatina_hcl.jpg",
+    "category": "creatina",
+    "price": 22,
+    "size": "300 g",
+    "brand": "Kaged Muscle",
+    "stock": 180
+  },
+  {
+    "title": "Keto Burn",
+    "photo": "keto_burn.jpg",
+    "category": "quemador",
+    "price": 45,
+    "size": "90 capsules",
+    "brand": "Nutrex Research",
+    "stock": 100
+  },
+  {
+    "title": "CLA Softgels",
+    "photo": "cla_softgels.jpg",
+    "category": "quemador",
+    "price": 30,
+    "size": "120 softgels",
+    "brand": "Optimum Nutrition",
+    "stock": 120
+  },
+  {
+    "title": "Mass Tech",
+    "photo": "mass_tech.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 65,
+    "size": "15 lbs",
+    "brand": "Muscletech",
+    "stock": 100
+  },
+  {
+    "title": "Hydroxycut Hardcore Elite",
+    "photo": "hydroxycut_hardcore_elite.jpg",
+    "category": "quemador",
+    "price": 50,
+    "size": "100 capsules",
+    "brand": "MuscleTech",
+    "stock": 150
+  },
+  {
+    "title": "Whey Protein Blend",
+    "photo": "whey_blend.jpg",
+    "category": "proteina",
+    "price": 40,
+    "size": "4 lbs",
+    "brand": "BSN",
+    "stock": 110
+  },
+  {
+    "title": "Casein Protein Powder",
+    "photo": "casein_powder.jpg",
+    "category": "proteina",
+    "price": 45,
+    "size": "3 lbs",
+    "brand": "Six Star Pro Nutrition",
+    "stock": 90
+  },
+  {
+    "title": "EAA Supplement",
+    "photo": "eaa_supplement.jpg",
+    "category": "bcaa",
+    "price": 35,
+    "size": "400 g",
+    "brand": "Muscle Feast",
+    "stock": 120
+  },
+  {
+    "title": "BCAA Capsules",
+    "photo": "bcaa_capsules.jpg",
+    "category": "bcaa",
+    "price": 20,
+    "size": "200 capsules",
+    "brand": "NOW Sports",
+    "stock": 200
+  },
+  {
+    "title": "Micronized Creatine Powder",
+    "photo": "micronized_creatine_powder.jpg",
+    "category": "creatina",
+    "price": 25,
+    "size": "300 g",
+    "brand": "Naked Nutrition",
+    "stock": 180
+  },
+  {
+    "title": "Creatine Ethyl Ester",
+    "photo": "creatina_ethyl_ester.jpg",
+    "category": "creatina",
+    "price": 30,
+    "size": "250 g",
+    "brand": "PrimaForce",
+    "stock": 150
+  },
+  {
+    "title": "Thermogenic Fat Burner",
+    "photo": "thermogenic_fat_burner.jpg",
+    "category": "quemador",
+    "price": 35,
+    "size": "60 capsules",
+    "brand": "Vintage Burn",
+    "stock": 100
+  },
+  {
+    "title": "Green Tea Extract",
+    "photo": "green_tea_extract.jpg",
+    "category": "quemador",
+    "price": 20,
+    "size": "120 capsules",
+    "brand": "NOW Sports",
+    "stock": 130
+  },
+  {
+    "title": "Mass Gainer Protein Powder",
+    "photo": "mass_gainer_protein_powder.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 50,
+    "size": "8 lbs",
+    "brand": "Body Fortress",
+    "stock": 80
+  },
+  {
+    "title": "Massive Mass Gainer",
+    "photo": "massive_mass_gainer.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 55,
+    "size": "12 lbs",
+    "brand": "CytoSport",
+    "stock": 100
+  },
+  {
+    "title": "Hydrolyzed Whey Protein",
+    "photo": "hydrolyzed_whey.jpg",
+    "category": "proteina",
+    "price": 60,
+    "size": "2 lbs",
+    "brand": "MuscleTech",
+    "stock": 90
+  },
+  {
+    "title": "Casein Protein Isolate",
+    "photo": "casein_isolate.jpg",
+    "category": "proteina",
+    "price": 50,
+    "size": "4 lbs",
+    "brand": "Optimum Nutrition",
+    "stock": 100
+  },
+  {
+    "title": "BCAA Powder",
+    "photo": "bcaa_powder.jpg",
+    "category": "bcaa",
+    "price": 28,
+    "size": "400 g",
+    "brand": "Cellucor",
+    "stock": 120
+  },
+  {
+    "title": "Intra-Workout BCAA",
+    "photo": "intra_workout_bcaa.jpg",
+    "category": "bcaa",
+    "price": 32,
+    "size": "500 g",
+    "brand": "Scivation",
+    "stock": 150
+  },
+  {
+    "title": "Creatine Nitrate",
+    "photo": "creatina_nitrate.jpg",
+    "category": "creatina",
+    "price": 24,
+    "size": "250 g",
+    "brand": "MusclePharm",
+    "stock": 180
+  },
+  {
+    "title": "Kre-Alkalyn Creatine",
+    "photo": "kre_alkalyn_creatine.jpg",
+    "category": "creatina",
+    "price": 28,
+    "size": "300 g",
+    "brand": "NOW Sports",
+    "stock": 200
+  },
+  {
+    "title": "Thermogenic Fat Burner Capsules",
+    "photo": "thermogenic_fat_burner_capsules.jpg",
+    "category": "quemador",
+    "price": 40,
+    "size": "90 capsules",
+    "brand": "Transparent Labs",
+    "stock": 80
+  },
+  {
+    "title": "L-Carnitine Liquid",
+    "photo": "l_carnitine_liquid.jpg",
+    "category": "quemador",
+    "price": 30,
+    "size": "16 oz",
+    "brand": "NOW Sports",
+    "stock": 100
+  },
+  {
+    "title": "Weight Gainer",
+    "photo": "weight_gainer.jpg",
+    "category": "creatina_hipercalorica",
+    "price": 45,
+    "size": "5 lbs",
+    "brand": "Universal Nutrition",
+    "stock": 70
+  }
+
+]

@@ -3,7 +3,7 @@ import crypto from "crypto";
 
 class ProductsManager {
   constructor() {
-    this.path = "./data/fs/files/products.json";
+    this.path = "./src/data/fs/files/products.json";
     this.init();
   }
   init() {
@@ -49,7 +49,7 @@ class ProductsManager {
     try {
       let products = await fs.promises.readFile(this.path, "utf-8");
       products = JSON.parse(products);
-      products = products.filter(each=>each.category===cat)
+      cat && (products = products.filter(each=>each.category===cat))
       if (products.length === 0) {
         throw new Error("No hay productos");
       } else {
