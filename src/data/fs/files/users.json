@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2820ab9e211e27763eef43bb",
+    "photo": "https://raysensenbach.com/wp-content/uploads/2013/04/default.jpg",
+    "email": "usuario1@gmail.com",
+    "password": 1234
+  },
+  {
+    "id": "de888f69476b1c88577ae3f3",
+    "photo": "https://raysensenbach.com/wp-content/uploads/2013/04/default.jpg",
+    "email": "usuario2@gmail.com",
+    "password": 5678
+  },
+  {
+    "id": "f391ed16f0edea7cbed4fd10",
+    "photo": "https://raysensenbach.com/wp-content/uploads/2013/04/default.jpg",
+    "email": "usuario3@gmail.com",
+    "password": 9874
+  },
+  {
+    "id": "116ecc6cd87d8d83c3d65271",
+    "photo": "https://raysensenbach.com/wp-content/uploads/2013/04/default.jpg",
+    "email": "usuario4@gmail.com",
+    "password": 56123
+  }
+]
