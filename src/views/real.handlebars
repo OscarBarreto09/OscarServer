@@ -1,0 +1,79 @@
+
+<section>
+
+<article>
+  <h1 class="bg-success-subtle p-2 text-center text-success w-100">PRODUCT
+      FORM</h1>
+    <form class="d-flex flex-column w-50 m-3">
+      <input
+        class="m-2 p-2 text-center"
+        type="text"
+        name="title"
+        id="title"
+        placeholder="TITLE"
+      />
+      <input
+        class="m-2 p-2 text-center"
+        type="text"
+        name="brand"
+        id="brand"
+        placeholder="BRAND"
+      />
+      <input
+        class="m-2 p-2 text-center"
+        type="text"
+        name="photo"
+        id="photo"
+        placeholder="PHOTO"
+      />
+      <input
+        class="m-2 p-2 text-center btn btn-success"
+        type="button"
+        id="register"
+        value="SUBMIT!"
+      />
+        </form>
+
+
+</article>
+
+<h1>PRODUCTS</h1>
+
+<article id="products"></article>
+
+</section>
+
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script>
+  const socket = io();
+  socket.on("products", data => {console.log(data)
+  let template = ``
+  template = data.map (each => `
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+      <img src="${each.photo}" class="img-fluid rounded-start" alt="${each.id}">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${each.title}</h5>
+        <p class="card-text"> ${each.brand} + ${each.size} </p>
+        <p class="card-text"><small class="text-body-secondary">$ ${each.price}</small></p>
+      </div>
+    </div>
+  </div>
+</div>`
+).join("")
+document.querySelector("#products").innerHTML = template
+  })
+
+    document.querySelector("#register").addEventListener("click", (event) => {
+    const title = document.querySelector("#title").value
+    const brand = document.querySelector("#brand").value
+    const photo = document.querySelector("#photo").value
+    console.log({title,brand})
+    socket.emit("register", { title, brand, photo })
+  })
+
+</script>
