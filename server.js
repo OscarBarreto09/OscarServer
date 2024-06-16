@@ -10,6 +10,11 @@ import morgan from "morgan";
 import { engine } from "express-handlebars";
 import __dirname from "./utils.js";
 import dbConnect from "./src/utils/dbConnect.util.js";
+import MongoStore from "connect-mongo";
+import cookieParser from "cookie-parser";
+import expressSession from "express-session";
+
+
 
 //console.log(process.env.MONGO_URI);
 
@@ -22,12 +27,23 @@ const ready = async () => {
 const nodeServer = createServer(server);
 nodeServer.listen(port, ready);
 
+server.use(
+    expressSession({
+      store: new MongoStore({ mongoUrl: process.env.MONGO_URI, ttl: 60 * 60 }),
+      secret: process.env.SECRET_SESSION,
+      resave: true,
+      saveUninitialized: true,
+      //cookie: { maxAge: 60 * 60 * 1000 },
+    })
+  );
+server.use(cookieParser(process.env.SECRET_COOKIE))
+
 const socketServer = new Server(nodeServer);
 socketServer.on("connection", socketCb);
 
 server.engine("handlebars",engine())
-server.set('view engine', 'handlebars')
-server.set('views', __dirname+'/src/views')
+server.set("view engine", "handlebars")
+server.set("views", __dirname+"/src/views")
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));

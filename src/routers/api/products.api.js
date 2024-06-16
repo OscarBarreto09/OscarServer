@@ -1,95 +1,33 @@
-import { Router } from "express";
-//import productsManager from "../../data/fs/ProductsManager.fs.js";
-import productsManager from "../../data/mongo/ProductsManager.mongo.js";
+import CustomRouter from "../CustomRouter.js";
+import isValidAdmin from "../../middlewares/isValidAdmin.mid.js";
+import uploader from "../../middlewares/multer.mid.js";
+import isPhoto from "../../middlewares/isPhoto.js";
+import isPropAndDefault from "../../middlewares/isPropAndDefault.js";
+import { read, paginate, readOne, create, update, destroy } from "./../../controllers/products.controller.js"
 
-const productsRouter = Router();
+class ProductsRouter extends CustomRouter {
+  init(){
 
-productsRouter.get("/", read);
-productsRouter.get("/:nid", readOne);
-productsRouter.post("/", create);
-productsRouter.put("/:nid", update);
-productsRouter.delete("/:nid", destroy);
+    this.read("/", ["PUBLIC"], read);
+    this.read("/paginate", ["PUBLIC"], paginate);
+    this.read("/product/:pid", ["PUBLIC"], readOne);
+    this.create(
+      "/",
+      isValidAdmin,
+      uploader.single("photo"),
+      isPhoto,
+      isPropAndDefault,
+      ["ADMIN"],
+      create
+    );
+    this.update("/:pid", ["ADMIN"], update);
+    this.destroy("/:pid", ["ADMIN"], destroy);
 
-
-async function create(req, res, next) {
-    try {
-      const data = req.body;
-      const one = await productsManager.create(data);
-      return res.json({
-        statusCode: 201,
-        message: "CREATED ID: " + one.id,
-      });
-    } catch (error) {
-      return next(error);
-    }
-  }
-
-  async function read (req, res, next){
-    try {
-        const { category } = req.query
-        const products = await productsManager.read(category)
-        if (products) {
-            return res.status(200).json({
-                response: products,
-                category,
-                success: true
-            })
-        } else {
-            const error = new Error("NOT FOUND")
-            error.statusCode = 404
-            throw error
-        }
-    } catch (error) {
-        return next(error);
-
-    }
-}
-
-async function readOne (req, res){
-    try {
-        const { pid } = req.params
-        const one = await productsManager.readOne(pid)
-        if (one) {
-            return res.status(200).json({
-                response: one,
-                success: true
-            })
-        } else {
-            const error = new Error("NOT FOUND")
-            error.statusCode = 404
-            throw error
-        }
-    } catch (error) {
-        return next(error);
-    }
-}
-
-async function update(req, res, next) {
-    try {
-      const { pid } = req.params;
-      const data = req.body;
-      const one = await productsManager.update(pid, data);
-      return res.json({
-        statusCode: 200,
-        response: one,
-      });
-    } catch (error) {
-      return next(error);
-    }
-  }
-
-async function destroy(req, res, next) {
-    try {
-      const { pid } = req.params;
-      const one = await productsManager.destroy(pid);
-      return res.json({
-        statusCode: 200,
-        response: one,
-      });
-    } catch (error) {
-      return next(error);
-    }
-  }
+  }  
+}  
 
 
-  export default productsRouter;
+
+const productsRouter = new ProductsRouter();
+
+export default productsRouter.getRouter();

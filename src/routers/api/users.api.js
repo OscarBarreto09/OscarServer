@@ -1,94 +1,17 @@
-import { Router } from "express";
-//import usersManager from "../../data/fs/UsersManager.fs.js";
-import usersManager from "../../data/mongo/UsersManager.mongo.js";
-
-const usersRouter = Router()
-
-
-usersRouter.get("/", read);
-usersRouter.get("/:nid", readOne);
-usersRouter.post("/", create);
-usersRouter.put("/:nid", update);
-usersRouter.delete("/:nid", destroy);
-
-
-async function create(req, res, next) {
-    try {
-      const data = req.body;
-      const one = await usersManager.create(data);
-      return res.json({
-        statusCode: 201,
-        message: "CREATED ID: " + one.id,
-      });
-    } catch (error) {
-      return next(error);
-    }
+import CustomRouter from "../CustomRouter.js";
+import { create, read, readOne, update, destroy } from "./../../controllers/users.controller.js"
+class UsersRouter extends CustomRouter{
+  init(){
+    this.create("/register", ["PUBLIC"], create);
+    this.create("/", ["PUBLIC"], create);
+    this.read("/", ["ADMIN","USER"], read);
+    this.read("/:uid", ["PUBLIC"], readOne);
+    this.update("/:uid", ["USER"], update);
+    this.destroy("/:uid", ["ADMIN"], destroy);
+    this.read("/register", ["PUBLIC"], read);
   }
-
-  async function read (req, res, next){
-    try {
-        const { rol } = req.query
-        const users = await usersManager.read(rol)
-        if (users) {
-            return res.status(200).json({
-                response: users,
-                rol,
-                success: true
-            })
-        } else {
-            const error = new Error("NOT FOUND")
-            error.statusCode = 404
-            throw error
-        }
-    } catch (error) {
-       return next (error)
-    }
 }
 
-async function readOne (req, res,next){
-    try {
-        const { uid } = req.params
-        const one = await usersManager.readOne(uid)
-        if (one) {
-            return res.status(200).json({
-                response: one,
-                success: true
-            })
-        } else {
-            const error = new Error("NOT FOUND")
-            error.statusCode = 404
-            throw error
-        }
-    } catch (error) {
-        return next (error)
-    }
-}
 
-async function update(req, res, next) {
-    try {
-      const { uid } = req.params;
-      const data = req.body;
-      const one = await usersManager.update(uid, data);
-      return res.json({
-        statusCode: 200,
-        response: one,
-      });
-    } catch (error) {
-      return next(error);
-    }
-  }
-
-async function destroy(req, res, next) {
-    try {
-      const { uid } = req.params;
-      const one = await usersManager.destroy(uid);
-      return res.json({
-        statusCode: 200,
-        response: one,
-      });
-    } catch (error) {
-      return next(error);
-    }
-  }
-
-export default usersRouter
+const usersRouter = new UsersRouter
+export default usersRouter.getRouter();

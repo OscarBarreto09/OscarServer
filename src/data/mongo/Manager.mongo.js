@@ -20,6 +20,16 @@ class Manager {
             throw error
         }
     }
+
+    async paginate({ filter, opts }) {
+        try {
+          const all = await this.Model.paginate(filter, opts);
+          return all;
+        } catch (error) {
+          throw error;
+        }
+      }
+
     async readOne(id){
         try {
            const one = await this.Model.findById(id) 
@@ -43,6 +53,18 @@ class Manager {
             throw error
         }
     }
+
+    async aggregate(obj) {
+        try {
+          const result = await this.Model.aggregate(obj);
+          return result;
+        } catch (error) {
+          throw error;
+        }
+      }
 }
+
+
+
 
 export default Manager

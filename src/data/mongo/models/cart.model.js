@@ -1,24 +1,42 @@
-import { Schema, model } from "mongoose";
+import { Schema, Types, model } from "mongoose";
+import mongoosePaginate from "mongoose-paginate-v2";
 
 const collection = "carts";
 const schema = new Schema(
   {
-    user_id: { type: String, required: true },
-    product_id: { type: String, required: true },
-    quantity: {
-      type: Number,
+    user_id: {
+      type: Types.ObjectId,
       required: true,
-      state: {
-        type: String,
-        enum: ["reserved", "paid", "delivered"],
-        default: "reserved",
-      },
+      index: true,
+      ref: "users",
+    },
+    product_id: {
+      type: Types.ObjectId,
+      required: true,
+      index: true,
+      ref: "products",
+    },
+    quantity: { type: Number, required: true, default: 1 },
+    state: {
+      type: String,
+      default: "reserved",
+      enum: ["reserved", "paid", "delivered"],
     },
   },
   {
     timestamps: true,
   }
 );
+
+schema.pre("find", function () {
+  this.populate("user_id", "email photo -_id");
+});
+
+schema.pre("find", function () {
+  this.populate("product_id");
+});
+
+schema.plugin(mongoosePaginate);
 
 
 const Cart =  model (collection, schema);
