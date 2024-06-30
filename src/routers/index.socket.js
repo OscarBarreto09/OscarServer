@@ -1,18 +1,22 @@
-import productsManager from "../data/mongo/ProductsManager.mongo.js";
-import usersManager from "../data/mongo/UsersManager.mongo.js";
-import cartsManager from "../data/mongo/CartsManager.mongo.js";
+//import usersManager from "../dao/fs/UsersManager.fs.js";
+//import productsManager from "../dao/fs/ProductsManager.fs.js";
+import productsManager from "../dao/mongo/ProductsManager.mongo.js";
+import usersManager from "../dao/mongo/UsersManager.mongo.js";
+import productsRepository from "../repositories/products.rep.js";
+
+import usersRepository from "../repositories/users.rep.js";
 
 export default async (socket) => {
-  console.log("client socket " + socket.id);
-  socket.emit("users", await usersManager.read());
-  socket.emit("products", await productsManager.paginate({filter:{}, opts:{page: 1, limit: 10}}));
-  // socket.emit("carts", await cartsManager.read());
-  socket.on("newProduct", async data=>{
-    await productsManager.create(data)
-    socket.emit("products", await productsManager.paginate({filter:{}, opts:{page: 1, limit: 10}}));
+  
+  console.log(`Client id: ${socket.id}`)
+  socket.emit("products", await productsRepository.readRepository())
+  socket.on("createProduct", async data => {
+    await productsRepository.createRepository(data)
+    socket.emit("products", await productsRepository.readRepository())
   })
-  socket.on("newUser", async data=>{
-    await usersManager.create(data)
-    socket.emit("users", await usersManager.read());
-  })
+  socket.on("register", async data => {
+    await usersRepository.createRepository(data);
+    socket.emit("users", await usersRepository.readRepository());
+  });
+
 };

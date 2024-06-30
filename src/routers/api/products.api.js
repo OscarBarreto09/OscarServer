@@ -1,5 +1,5 @@
 import CustomRouter from "../CustomRouter.js";
-import isValidAdmin from "../../middlewares/isValidAdmin.mid.js";
+import isValidAdmin from "../../middlewares/isValidAdmin.js";
 import uploader from "../../middlewares/multer.mid.js";
 import isPhoto from "../../middlewares/isPhoto.js";
 import isPropAndDefault from "../../middlewares/isPropAndDefault.js";
